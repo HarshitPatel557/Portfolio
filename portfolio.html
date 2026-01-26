@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshit - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo">Harshit Patel</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Harshit Patel</h1>
+                <p class="subtitle"> Full Stack Developer </p>
+                <p class="tagline">Crafting elegant solutions with clean, modern code. Let's build something great.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="cta-button primary-cta">View My Work</a>
+                    <a href="#contact" class="cta-button secondary-cta">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-image-placeholder">
+                
+                <img src="Media/gib.jpg" alt="">
+
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2 class="section-title">✨ About Me</h2>
+            <div class="about-grid">
+                <div class="bio">
+                    <div class="photo-placeholder">
+                        <img src="Media/pfp_img.png" alt="">
+                    </div>
+                        Aspiring Software Developer with strong foundation in programming, web development, and problem-solving. Proficient in
+                        building scalable applications using Python, Django, and React.js. Eager to contribute technical skills and innovative
+                        thinking to deliver efficient, high-quality software solutions.
+                    </div>
+
+                <div class="skills">
+                    <h3>My Core Skills</h3>
+                    <ul class="skills-list">
+                        <li><i class="fab fa-python"></i> Python / Django </li>
+                        <li><i class="fab fa-js-square"></i> JavaScript (ES6+)</li>
+                        <li><i class="fab fa-html5"></i> HTML5 (Semantic)</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS3 (Flexbox/Grid)</li>
+                        <li><i class="fab fa-react"></i> React / Vue / Angular</li>
+                        <li><i class="fab fa-node-js"></i> Node.js / PHP</li>
+                        <li><i class="fas fa-database"></i> SQL / NoSQL Databases</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2 class="section-title">💻 Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image-placeholder"><img src="Media/E-comm.png" alt=""></div>
+                    <h3>ShopCircle</h3>
+                    <p class="description">A full-stack e-commerce web application featuring secure user authentication, dynamic product listings, and real-time cart management. The platform delivers a smooth and responsive shopping experience with a modern, API-driven architecture.</p>
+                    <p class="tech-stack"><strong>Tech Stack:</strong> Python, Django, Django REST Framework, JWT, React.js, Redux, SQLite</p>
+                    <div class="project-links">
+                        <a href="https://github.com/HarshitPatel557/E-Commerce" target="_blank" class="link-button"><i class="fas fa-eye"></i> Live Demo</a>
+                        <a href="https://github.com/HarshitPatel557/E-Commerce" target="_blank" class="link-button secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image-placeholder"><img src="Media/Hosp.png" alt=""></div>
+                    <h3>HospEase</h3>
+                    <p class="description">A React.js-based hospital management system that enables patient registration, appointment booking, and access to medical records through an intuitive and responsive interface.</p>
+                    <p class="tech-stack"><strong>Tech Stack:</strong> React.js, JavaScript, HTML5, CSS3, React Router, REST APIs</p>
+                    <div class="project-links">
+                        <a href="https://github.com/HarshitPatel557/HospEase" target="_blank" class="link-button"><i class="fas fa-eye"></i> Live Demo</a>
+                        <a href="https://github.com/HarshitPatel557/HospEase" target="_blank" class="link-button secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image-placeholder">[Image Placeholder: Project 3 Screenshot]</div>
+                    <h3>Project Title Three</h3>
+                    <p class="description">A smaller utility tool built to improve workflow efficiency for a specific user group.</p>
+                    <p class="tech-stack">**Tech Stack:** Python, Flask, Jinja2 Templates</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="link-button"><i class="fas fa-eye"></i> Live Demo</a>
+                        <a href="#" target="_blank" class="link-button secondary"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="experience" class="container">
+            <h2 class="section-title">💼 Experience & Education</h2>
+            
+            <div class="experience-grid">
+                <div class="work-history">
+                    <h3>Work History</h3>
+                    <div class="timeline-item">
+                        <h4>Python full-stack Developer</h4>
+                        <p class="company">SkyllX | 2025 - 2026</p>
+                        <ul>
+                            <li>Completed professional training in Python full-stack development using Django, Django Rest Framework, and React.js.</li>
+                            <li>Built RESTful APIs with authentication, authorization, and full CRUD operations.</li>
+                            <li>Integrated React.js frontends with Django backends to create production-ready web applications.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="education-achievements">
+                    <h3>Education & Achievements</h3>
+                    <div class="timeline-item">
+                        <h4> Bachelor of Technology in Electronics and Communication Engineering </h4>
+                        <p class="company">Oriental Institute of Science and Technology - Bhopal, India | 2021 - 2025</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>AWS Certified Developer – Associate</h4>
+                        <p class="company">Certification | Issued 2023</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2 class="section-title">📧 Get In Touch</h2>
+            <div class="contact-grid">
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required aria-label="Your Name">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-label="Your Email Address">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required aria-label="Your Message"></textarea>
+                    
+                    <button type="submit" class="cta-button primary-cta">Send Message</button>
+                    <p id="form-message" aria-live="polite" style="display: none; margin-top: 10px;"></p>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Connect With Me</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>Email: <a href="mailto:patelharshithp404@gmail.com">patelharshithp404@gmail.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>Phone: (+91) 7879264557</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/harshit-patel-051538258/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com/HarshitPatel557" target="_blank" aria-label="GitHub Profile"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://leetcode.com/u/patelharshithp404/" target="_blank" aria-label="Leecode Profile"><i class="fas fa-code fa-2x"></i></a>
+                    </div>
+                    
+                    <a href="https://drive.google.com/file/d/1MIdBz0ih_9aRtmJxmothkHv6du765Vi9/view?usp=sharing" download class="cta-button secondary-cta download-btn">
+                        <i class="fas fa-download"></i> Download Résumé
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Harshit Patel. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

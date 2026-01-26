@@ -1,0 +1,565 @@
+/* 
+    CSS Styling - style.css
+    Theme: Deep Blue/Light Gray/Accent Teal (Professional, Minimalist)
+    Layout: Mobile-first & Responsive using CSS Grid/Flexbox
+*/
+
+/* --- 1. Global Variables & Reset --- */
+:root {
+    /* Light Mode Palette */
+    --color-primary: #0a192f;        /* Deep Blue (Text/Background) */
+    --color-secondary: #f0f2f5;      /* Light Gray (Background/Text) */
+    --color-accent: #00bcd4;         /* Teal (Highlight/CTA) */
+    --color-text: #333;
+    --color-link: #00bcd4;
+    --color-bg-card: #fff;
+    --color-border: #ddd;
+
+    /* Typography */
+    --font-family-primary: 'Poppins', sans-serif;
+
+    /* Transitions */
+    --transition-duration: 0.3s;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --color-primary: #f0f2f5;
+    --color-secondary: #0a192f;
+    --color-accent: #00bcd4;
+    --color-text: #f0f2f5;
+    --color-link: #00bcd4;
+    --color-bg-card: #112240;
+    --color-border: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+/* --- 2. Typography & General Elements --- */
+h1, h2, h3, h4 {
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    transition: color var(--transition-duration);
+}
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+    color: var(--color-primary); /* In dark mode, primary is light */
+}
+
+h2.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    /* Underline effect */
+    display: inline-block;
+}
+h2.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--color-accent);
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+}
+a:hover {
+    color: var(--color-accent);
+}
+
+.container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- 3. Header & Navigation --- */
+header {
+    background-color: var(--color-bg-card);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color var(--transition-duration), box-shadow var(--transition-duration);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+nav ul {
+    list-style: none;
+    display: none; /* Mobile-first: Hide menu by default */
+}
+
+nav ul a {
+    color: var(--color-text);
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom var(--transition-duration), color var(--transition-duration);
+}
+
+nav ul a:hover {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* --- 4. CTA Buttons & Forms --- */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 15px;
+    transition: all var(--transition-duration);
+}
+
+.primary-cta {
+    background-color: var(--color-accent);
+    color: var(--color-secondary); /* Light text on accent */
+    border: 2px solid var(--color-accent);
+}
+.primary-cta:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.secondary-cta {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+.secondary-cta:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+.dark-mode .secondary-cta {
+    color: var(--color-primary); /* Light text on dark mode */
+    border-color: var(--color-primary);
+}
+
+/* Contact Form Styling */
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    background-color: var(--color-bg-card);
+    color: var(--color-text);
+    transition: border-color var(--transition-duration), background-color var(--transition-duration);
+}
+
+/* --- 5. Home / Hero Section --- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+    min-height: 80vh;
+    background-color: var(--color-secondary);
+    transition: background-color var(--transition-duration);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero .subtitle {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero .tagline {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    color: var(--color-text);
+    animation: fadeInUp 2s ease-out;
+}
+
+.hero-image-placeholder {
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-border);
+    border-radius: 25%;
+    display: none; /* Hide on mobile */
+    margin-top: 2rem;
+    text-align: center;
+    line-height: 200px;
+    color: var(--color-text);
+    font-size: 0.9rem;
+}
+
+.hero-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 25%;
+}
+
+/* --- 6. About Section --- */
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: var(--color-border);
+    border-radius: 50%;
+    /* margin: 0 auto 1.5rem; */
+}
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+.skills-list li {
+    background-color: var(--color-bg-card);
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-duration);
+}
+.skills-list li i {
+    color: var(--color-accent);
+    margin-right: 8px;
+}
+.skills-list li:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+.dark-mode .skills-list li {
+    background-color: var(--color-bg-card);
+}
+
+/* --- 7. Projects Section --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: Single column */
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--color-bg-card);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform var(--transition-duration), box-shadow var(--transition-duration);
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-image-placeholder {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    line-height: 180px;
+    font-size: 0.9rem;
+    color: var(--color-text);
+}
+.project-image-placeholder img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    display: block;
+    border-radius: 5%;
+}
+
+.project-links {
+    margin-top: 1rem;
+}
+.project-links .link-button {
+    padding: 8px 15px;
+    margin: 0 5px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+/* --- 8. Experience Section --- */
+.experience-grid {
+    display: flex;
+    flex-direction: column; /* Mobile: Stacked */
+    gap: 3rem;
+}
+
+.timeline-item {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 15px;
+    margin-bottom: 1.5rem;
+}
+.timeline-item h4 {
+    margin-bottom: 0.2rem;
+}
+.timeline-item .company {
+    font-style: italic;
+    color: var(--color-link);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.timeline-item ul {
+    padding-left: 20px;
+    font-size: 0.95rem;
+}
+
+/* --- 9. Contact Section --- */
+.contact-grid {
+    display: flex;
+    flex-direction: column; /* Mobile: Stacked */
+    gap: 2rem;
+}
+
+.contact-info {
+    background-color: var(--color-bg-card);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.info-item i {
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.social-links a {
+    margin-right: 15px;
+    color: var(--color-primary);
+    transition: color var(--transition-duration), transform var(--transition-duration);
+}
+.social-links a:hover {
+    color: var(--color-accent);
+    transform: scale(1.1);
+}
+.dark-mode .social-links a {
+    color: var(--color-primary);
+}
+
+.download-btn {
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- 10. Footer --- */
+footer {
+    background-color: var(--color-bg-card);
+    color: var(--color-text);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--color-border);
+    transition: background-color var(--transition-duration), border-color var(--transition-duration);
+}
+
+/* --- 11. Accessibility & Dark Mode Toggle --- */
+#dark-mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--color-bg-card);
+    color: var(--color-primary);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all var(--transition-duration);
+}
+
+#dark-mode-toggle:hover {
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+    border-color: var(--color-accent);
+}
+
+.dark-mode #dark-mode-toggle i.fa-moon {
+    display: none;
+}
+.dark-mode #dark-mode-toggle i.fa-sun {
+    display: inline-block;
+}
+
+/* Add sun icon for dark mode (initially hidden) */
+#dark-mode-toggle i.fa-sun {
+    display: none;
+}
+
+
+/* --- 12. Media Queries (Desktop/Tablet) --- */
+@media (min-width: 768px) {
+    /* Navigation */
+    nav ul {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        padding: 6rem 1rem;
+    }
+    .hero-content {
+        max-width: 60%;
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    .hero .subtitle {
+        font-size: 1.8rem;
+    }
+    .hero-image-placeholder {
+        display: block;
+        width: 250px;
+        height: 400px;
+        margin-left: 5rem;
+        line-height: 250px;
+    }
+
+    /* About Section */
+    .about-grid {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .bio {
+        flex: 2;
+        padding-right: 2rem;
+    }
+    .skills {
+        flex: 1;
+    }
+    .photo-placeholder {
+        float: left;
+        margin: 0 1.5rem 1rem 0;
+    }
+    .skills-list {
+        grid-template-columns: 1fr; /* Keep single column for better readability */
+    }
+
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr); /* Desktop: Three columns */
+    }
+
+    /* Experience Section */
+    .experience-grid {
+        flex-direction: row;
+    }
+    .work-history, .education-achievements {
+        flex: 1;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+        flex-direction: row;
+    }
+    #contact-form {
+        flex: 2;
+    }
+    .contact-info {
+        flex: 1;
+    }
+}
+
+
+/* --- 13. Keyframe Animations --- */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
