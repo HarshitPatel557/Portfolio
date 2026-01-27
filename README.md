@@ -1,5 +1,3 @@
-
-
 # 🌐 Harshit Patel – Developer Portfolio
 
 A modern, responsive personal portfolio website built using **HTML, CSS, and JavaScript** to showcase my skills, projects, experience, and contact information.
@@ -126,5 +124,3 @@ This project is open source and available under the **MIT License**.
 Give the repo a ⭐ and feel free to fork it!
 
 ---
-
-
