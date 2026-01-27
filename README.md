@@ -11,7 +11,6 @@ This portfolio highlights my journey as a Full Stack Developer and features clea
 ## 🚀 Live Preview
 
 👉 [View Portfolio Website](https://portfolio-flame-xi-6jekpy862h.vercel.app/)
-*(Add your deployed link here – GitHub Pages / Netlify / Vercel)*
 
 ---
 
