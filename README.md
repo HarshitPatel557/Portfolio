@@ -72,11 +72,13 @@ Portfolio/
 * Secure authentication with JWT
 * Real-time cart management
 
+
 ### 🏥 HospEase (Hospital Management System)
 
 * React.js application
 * Patient registration & appointments
 * REST API integration
+
 
 ---
 
@@ -113,7 +115,6 @@ Open index.html
 
 ---
 
-
 ## 📄 License
 
 This project is open source and available under the **MIT License**.
@@ -125,3 +126,4 @@ This project is open source and available under the **MIT License**.
 Give the repo a ⭐ and feel free to fork it!
 
 ---
+
